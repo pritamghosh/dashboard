@@ -1,0 +1,51 @@
+<div class="top-accordion">
+  <P class="topAirportsHeading">Top airports</P>
+  <accordion>
+    <accordion-group #group [panelClass]="customClass" *ngFor="let topAirports of topAirportsDet;let i = index;" [isOpen]="i == 0">
+      <div accordion-heading>
+        {{topAirports.airport}} {{topAirports.total}}
+        <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+      </div>
+      <div class="airportStyle">
+        {{topAirports.delayed}} Delayed
+        <br> {{topAirports.cancelLanding}} Cancel landing
+        <br> {{topAirports.aircraftChange}} Aircraft change
+      </div>
+    </accordion-group>
+  </accordion>
+</div>
+<div>
+  <P class="topAirportsHeading">Top airlines</P>
+  <accordion *ngIf="topAirlinesDet">
+    <accordion-group #group [panelClass]="customClass" *ngFor="let topAirlines of topAirlinesDet;let i = index;" [isOpen]="i == 0">
+      <div accordion-heading>
+        {{topAirlines.airline}} {{topAirlines.total}}
+        <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+      </div>
+      <div class="airportStyle">
+        {{topAirlines.delayed}} Delayed
+        <br> {{topAirlines.cancelLanding}} Cancel landing
+        <br> {{topAirlines.aircraftChange}} Aircraft change
+      </div>
+    </accordion-group>
+  </accordion>
+</div>
+
+<div class="row broadcast">
+  <div class="col-sm-5 col-md-5">
+    <div class="flight-count">
+      163
+    </div>
+    <div class="broadcast-text">
+      FLIGHT
+    </div>
+  </div>
+  <div class="col-sm-7 col-md-7">
+    <div class="broadcast-text">
+      to depart in next
+    </div>
+    <div class="time-interval">
+      30 MINS
+    </div>
+  </div>
+</div>

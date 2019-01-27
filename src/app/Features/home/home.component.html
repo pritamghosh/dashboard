@@ -1,0 +1,29 @@
+<!-- Top Bar For Tabs and Desktop-->
+<div class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="/assets/logo.jpg" alt="">
+      <span class="companyName hidden-xs">MASAL</span>
+    </div>
+    <div class="nav navbar-nav pull-right hidden-md-down hidden-xs">
+      <div class="search-button" (click)="searchFlight()">
+        <i class="fas fa-search"></i>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div>
+  <div class="col-xs-12">
+    <main class="main">
+      <div class="container-fluid">
+        <div class="mainContent">
+          <!-- <router-outlet></router-outlet> -->
+          <app-dashboard></app-dashboard>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

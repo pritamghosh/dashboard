@@ -1,0 +1,65 @@
+<!-- Top Bar For Tabs and Desktop-->
+<div class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <label>Search flights</label>
+      <!-- <div class="input-group"> -->
+        <!-- <span class="input-group-addon" id="basic-addon1">MH</span> -->
+        <input type="text" class="form-control formInput search-box" aria-describedby="basic-addon1">
+      <!-- </div> -->
+    </div>
+    <div class="nav navbar-nav pull-right hidden-md-down hidden-xs">
+      <div class="cross-button" (click)="closeSearch()">
+        <i class="fas fa-times"></i>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div>
+  <div class="col-xs-12">
+    <main class="main">
+      <div class="container-fluid">
+        <div class="mainContent">
+          <!-- <router-outlet></router-outlet> -->
+          <!-- <app-dashboard></app-dashboard> -->
+          <div *ngFor="let flight of searchData">
+            <div class="row search-row">
+              <div class="col-md-1 col-lg-1">
+                <img src="/assets/logo.jpg" alt="">
+              </div>
+              <div class="col-md-11 col-lg-11">
+                <div class="row">
+                  <div class="col-md-1 col-lg-1 airline">
+                    {{flight.AIRLINE}}&nbsp;&nbsp;{{flight.FLIGHT_ID}}
+                  </div>
+                  <div class="col-md-9 col-lg-9 status">
+                    Open
+                  </div>
+                  <div class="col-md-1 col-lg-1 status right-align">
+                    Today
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-7 col-lg-7 row-title">
+                    KUL-LHR-JFK
+                  </div>
+                  <div class="col-md-2 col-lg-2">
+                      <span class="row-title">STD</span><span class="row-value"> 18:00</span>
+                  </div>
+                  <div class="col-md-2 col-lg-2 right-align">
+                      <span class="row-title">ETD</span><span class="row-value"> 19:00</span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

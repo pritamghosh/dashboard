@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #555;
+  }
+  
+  #globe {
+    cursor: move;  
+  }
+  
+  #current {
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    margin-left: 4%;
+    margin-top: 4%;
+  }
+  
+  content {}.map path {
+    fill: #87B687;
+    stroke: rgb(212, 208, 208);
+  }
+  
+  .projection-center {
+    fill: red;
+  }
+  
+  .graticule path {
+    fill: none;
+    stroke: #eee;
+  }

@@ -1,0 +1,11 @@
+<div *ngIf=" isFlightsDealyedDataRetrieved && isTotalFlightsDataRetrieved"  class = "divStyle">  
+  <app-radial-progress-chart [totalVal]='totalFlights[0].TOTALFLIGHTS' [resValue]='flightsDelayed[0].DELAYEDFLIGHTS' [progressColor] = 'flightChartColor'></app-radial-progress-chart>  
+</div>
+
+<div *ngIf="isFlightsOverbookedDataRetrived && isTotalFlightsDataRetrieved" class = "divStyle">  
+<app-radial-progress-chart [totalVal]='totalFlights[0].TOTALFLIGHTS' [resValue]='flightsOverBooked[0].OVERBOOKED' [progressColor] = 'flightOverbookedChartColor'></app-radial-progress-chart>  
+</div>
+
+<div *ngIf="isTotalPaxRetrived && isAcceptedPaxRetrived" class = "divStyle">  
+  <app-radial-progress-chart [totalVal]='totalPax[0].totalPax' [resValue]='totalAcceptedPax[0].ACCEPTED_PASSENGERS_COUNT' [progressColor] = 'paxChartColor'></app-radial-progress-chart>  
+</div>
